@@ -1,0 +1,17 @@
+server:
+  port:8080
+spring:
+  datasource:
+    db1:
+      driverClassName: com.mysql.cj.jdbc.Driver
+      username: root
+      password: 123456
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/d1?useSSL=FALSE&serverTimezone=UTC&allowPublicKeyRetrieval=true
+      type: com.alibaba.druid.pool.DruidDataSource
+    db2:
+      driverClassName: com.mysql.cj.jdbc.Driver
+      username: root
+      password: 123456
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/d2?useSSL=FALSE&serverTimezone=UTC&allowPublicKeyRetrieval=true
+      type: com.alibaba.druid.pool.DruidDataSource
+
