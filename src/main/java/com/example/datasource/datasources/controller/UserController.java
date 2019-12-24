@@ -5,14 +5,16 @@ import com.example.datasource.datasources.service.UserService;
 import com.example.datasource.redis.CityInfo;
 import com.example.datasource.redis.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import javax.validation.Valid;
+import javax.validation.constraints.Size;
 
 @RestController
 @RequestMapping("/user")
+@Validated
 public class UserController {
  
     @Autowired
@@ -34,4 +36,9 @@ public class UserController {
         this.cityService.delete(1);
     }
 
+    @PostMapping(value="/getException" ,produces = "application/json;charset=UTF-8")
+    public String getException(@Valid @RequestBody User user) {
+        System.out.println(user.getName());
+        return  "validate1";
+    }
 }

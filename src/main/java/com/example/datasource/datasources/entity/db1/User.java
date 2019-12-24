@@ -1,9 +1,12 @@
 package com.example.datasource.datasources.entity.db1;
- 
+
+import javax.validation.constraints.Size;
+
 public class User {
  
-    private Integer id;
-    private String name;
+    public Integer id;
+    @Size(min = 1,max = 10,message = "姓名长度必须为1到10")
+    public String name;
  
     public User() {
     }
