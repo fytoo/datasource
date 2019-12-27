@@ -79,5 +79,9 @@ public class UserController {
     public void rabbitUsermq4() {
         HelloSender1.send4();
     }
+    @GetMapping(value="/rabbitUsermq5" )
+    public void rabbitUsermq5() {
+        HelloSender1.send4();
+    }
 
 }
