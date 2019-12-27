@@ -2,22 +2,19 @@ package com.example.datasource.datasources.controller;
 
 import com.example.datasource.datasources.entity.db1.User;
 import com.example.datasource.datasources.service.UserService;
-import com.example.datasource.rabbitmq.HelloSender1;
 import com.example.datasource.redis.CityInfo;
 import com.example.datasource.redis.CityService;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.core.MessageDeliveryMode;
 import org.springframework.amqp.core.MessageProperties;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import javax.validation.constraints.Size;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.UUID;
+
 
 @RestController
 @RequestMapping("/user")
